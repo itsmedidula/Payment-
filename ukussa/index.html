@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ukussa VIP - Payment Gateway</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Ukussa VIP</h1>
+            <p>Manual Payment Gateway</p>
+        </header>
+
+        <main>
+            <!-- Payment Packages -->
+            <section class="card">
+                <h2>💰 Payment Packages</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Duration</th>
+                            <th>Price (LKR)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1 Hour</td>
+                            <td>500</td>
+                        </tr>
+                        <tr>
+                            <td>30 Minutes (0.5h)</td>
+                            <td>250</td>
+                        </tr>
+                        <tr>
+                            <td>15 Minutes (0.25h)</td>
+                            <td>150</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Payment Methods -->
+            <section class="card">
+                <h2>🏦 Payment Methods</h2>
+                <div class="payment-methods-grid">
+                    <div class="payment-method">
+                        <h3>Pay via Bank Transfer</h3>
+                        <p><strong>Account Name:</strong> Didula Rashmika</p>
+                        <p><strong>Account Number:</strong> 1168 5518 5748</p>
+                        <p><strong>Bank Name:</strong> SAMPATH BANK PLC</p>
+                        <p><strong>Branch:</strong> Anuradhapura New Town Branch</p>
+                    </div>
+                    <div class="payment-method">
+                        <h3>Pay via Ez Cash</h3>
+                        <p><strong>Mobile Number:</strong> 0771820962</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Submission Form -->
+            <section class="card">
+                <h2>📤 Submit Your Payment</h2>
+                <form id="payment-form" novalidate>
+                    <div class="form-group">
+                        <label>Select a Package:</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="package" value="1 Hour - LKR 500" required> 1 Hour (500 LKR)</label>
+                            <label><input type="radio" name="package" value="30 Minutes - LKR 250" required> 30 Min (250 LKR)</label>
+                            <label><input type="radio" name="package" value="15 Minutes - LKR 150" required> 15 Min (150 LKR)</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="whatsapp">Your WhatsApp Number:</label>
+                        <input type="tel" id="whatsapp" name="whatsapp" placeholder="e.g., 0771234567" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="proof">Upload Payment Proof (Screenshot/PDF):</label>
+                        <input type="file" id="proof" name="proof" accept="image/*,application/pdf" required>
+                    </div>
+
+                    <div id="message-container"></div>
+
+                    <button type="submit" id="submit-btn">Submit Payment</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Ukussa VIP. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
