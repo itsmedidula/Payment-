@@ -1,0 +1,236 @@
+:root {
+    --bg-dark: #121212;
+    --bg-card: #1E1E1E;
+    --gold-primary: #F0B90B;
+    --gold-secondary: #FFD700;
+    --text-light: #EAEAEA;
+    --text-medium: #A9A9A9;
+    --success-color: #28a745;
+    --error-color: #dc3545;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    color: var(--gold-primary);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+header p {
+    color: var(--text-medium);
+    font-size: 1.1rem;
+}
+
+.card {
+    background-color: var(--bg-card);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #2a2a2a;
+}
+
+h2 {
+    color: var(--gold-secondary);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #333;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+}
+
+thead {
+    color: var(--text-medium);
+}
+
+tbody tr {
+    border-bottom: 1px solid #333;
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+td:last-child {
+    font-weight: 600;
+    color: var(--gold-secondary);
+    text-align: right;
+}
+
+/* Payment Methods */
+.payment-methods-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.payment-method {
+    background-color: #252525;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.payment-method h3 {
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.payment-method p {
+    font-size: 0.95rem;
+    color: var(--text-medium);
+}
+
+.payment-method strong {
+    color: var(--text-light);
+}
+
+/* Form */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+input[type="tel"], input[type="file"] {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 4px;
+    color: var(--text-light);
+    font-family: 'Poppins', sans-serif;
+}
+
+input[type="file"] {
+    cursor: pointer;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--gold-primary);
+}
+
+.radio-group label {
+    display: block;
+    background: #2a2a2a;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #444;
+    transition: all 0.2s ease-in-out;
+}
+
+.radio-group label:hover {
+    background-color: #333;
+}
+
+.radio-group input[type="radio"]:checked + label,
+.radio-group label:has(> input[type="radio"]:checked) {
+    border-color: var(--gold-primary);
+    background-color: #2c281c;
+}
+
+
+button[type="submit"] {
+    width: 100%;
+    padding: 0.85rem;
+    background-color: var(--gold-primary);
+    color: var(--bg-dark);
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--gold-secondary);
+}
+
+button[type="submit"]:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+/* Messages */
+#message-container {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    text-align: center;
+    display: none; /* Initially hidden */
+}
+
+.success {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.error {
+    background-color: var(--error-color);
+    color: white;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--text-medium);
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        margin: 1rem auto;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .payment-methods-grid {
+        grid-template-columns: 1fr;
+    }
+
+    td, th {
+        font-size: 0.9rem;
+    }
+}
